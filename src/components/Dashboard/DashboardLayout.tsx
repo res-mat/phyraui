@@ -113,7 +113,8 @@ import {
   DatabaseIcon,
   Brain,
   TestTube,
-  Terminal, Activity, Globe, DollarSign
+  GitBranch,
+  Terminal, Activity, Globe, DollarSign, Code, Boxes
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 
@@ -122,6 +123,13 @@ interface SidebarItem {
   path: string;
   icon: React.ReactNode;
 }
+
+// interface SidebarItem {
+//   title: string;
+//   path: string;
+//   icon: React.ReactNode;
+//   children?: Omit<SidebarItem, 'children'>[]; // Allow nested items but prevent infinite nesting
+// }
 
 const SIDEBAR_ITEMS: SidebarItem[] = [
   {
@@ -189,8 +197,23 @@ const SIDEBAR_ITEMS: SidebarItem[] = [
     title: 'Components',
     path: '/dashboard/components',
     icon: <DollarSign size={20} />,
-  } 
-  
+  },
+  {
+    title: 'Environments',
+    path: '/dashboard/environments',
+    icon: <Cloud size={20} />
+  },
+  {
+    title: 'Terminal',
+    path: '/dashboard/terminal',
+    icon: <Terminal size={20} />
+  },
+  // In your sidebar configuration  
+  {
+  title: 'SSH',
+  path: '/dashboard/ssh',
+  icon: <Terminal size={20} />
+  }
 ];
 
 const DashboardLayout: React.FC = () => {

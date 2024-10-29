@@ -39,10 +39,10 @@ const Login: React.FC = () => {
       <div className="hidden md:flex md:w-1/2 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 p-12 text-white">
         <div className="w-full flex flex-col justify-between">
           <div>
-            <div className="flex items-center space-x-3">
+            {/* <div className="flex items-center space-x-3">
               <Brain size={36} />
               <span className="text-2xl font-bold">Phyra.ai</span>
-            </div>
+            </div> */}
             <h2 className="mt-20 text-4xl font-bold leading-tight">
               Welcome back to the future of AI orchestration
             </h2>
@@ -65,12 +65,12 @@ const Login: React.FC = () => {
               </div>
               <span>Streamlined Workflows</span>
             </div>
-            <div className="flex items-center space-x-3">
+            {/* <div className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center">
                 <Lock size={20} />
               </div>
               <span>Enterprise-grade Security</span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

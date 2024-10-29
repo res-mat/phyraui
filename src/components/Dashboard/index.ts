@@ -10,6 +10,9 @@ export { default as Components } from './Components';
 export { default as MLPipeline } from './MLPipeline';
 export { default as CostManagement } from './CostManagement';
 export { default as APIManagement } from './APIManagement';
+export { default as EnvironmentManager } from './Environments/EnvironmentManager';
+export { default as TerminalPage } from './Terminal/TerminalPage';
+export { default as SSH } from './SSH/ssh';
 
 
 export {

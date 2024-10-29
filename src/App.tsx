@@ -77,7 +77,10 @@ import {
   Components,
   MLPipeline,
   CostManagement,
-  APIManagement
+  APIManagement, 
+  EnvironmentManager,
+  TerminalPage,
+  SSH
 } from './components/Dashboard';
 import Home from './pages/Home';
 import BlogList from './components/Blog/BlogList';
@@ -124,6 +127,9 @@ const App: React.FC = () => {
               <Route path="ml-pipeline" element={<MLPipeline />} />
               <Route path="cost-management" element={<CostManagement />} />
               <Route path="api-management" element={<APIManagement />} />
+              <Route path="environments" element={<EnvironmentManager />} />
+              <Route path="terminal" element={<TerminalPage />} />
+              <Route path="ssh" element={<SSH />} />
             </Route>
           </Route>
         </Routes>
