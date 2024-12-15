@@ -1,5 +1,5 @@
 import React from 'react';
-import { Network, Brain, BookOpen, FileText, Users, ArrowRight } from 'lucide-react';
+import { Network, Brain, BookOpen, FileText, Users, ArrowRight, GitMerge } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => (
@@ -90,6 +90,29 @@ const Hero: React.FC = () => (
                 AI systems. Our research helps identify potential failure modes and behavioral 
                 patterns before they manifest in deployed systems.
               </p>
+
+              <div className="border-t border-[#2C3CD1] border-opacity-20 pt-6 mt-6">
+        <h3 className="text-xl font-semibold text-[#2C3CD1] mb-4 flex items-center">
+          <GitMerge className="w-5 h-5 mr-2" />
+          Compound AI Systems
+        </h3>
+        <p className="text-base text-[#2C3CD1] leading-relaxed">
+
+        <a 
+        href="https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="underline hover:text-blue-600"
+      >
+        Compound AI systems
+      </a>{" "}
+           are revolutionizing the way we approach complex problems. 
+          By integrating multiple AI technologies, we're unlocking unprecedented potential 
+          for innovation and efficiency. Our research explores how these integrated systems 
+          can leverage interpretable features discovered through sparse autoencoders to 
+          create more robust and understandable AI architectures.
+        </p>
+      </div>
 
               {/* Resource CTA */}
               <div className="pt-4">
