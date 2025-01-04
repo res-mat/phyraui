@@ -1,100 +1,3 @@
-// import React, { useState } from 'react';
-// import { Outlet, useNavigate, useLocation } from 'react-router-dom';
-// import { 
-//   LayoutDashboard, 
-//   ScrollText, 
-//   Settings, 
-//   Folder, 
-//   Database,
-//   MenuIcon,
-//   X
-// } from 'lucide-react';
-
-// interface SidebarItem {
-//   title: string;
-//   path: string;
-//   icon: React.ReactNode;
-// }
-
-// const SIDEBAR_ITEMS: SidebarItem[] = [
-//   {
-//     title: 'Overview',
-//     path: '/dashboard',
-//     icon: <LayoutDashboard className="w-5 h-5" />
-//   },
-//   {
-//     title: 'Logs',
-//     path: '/dashboard/logs',
-//     icon: <ScrollText className="w-5 h-5" />
-//   },
-//   {
-//     title: 'Fine Tuning Jobs',
-//     path: '/dashboard/fine-tuning',
-//     icon: <Settings className="w-5 h-5" />
-//   },
-//   {
-//     title: 'Projects',
-//     path: '/dashboard/projects',
-//     icon: <Folder className="w-5 h-5" />
-//   },
-//   {
-//     title: 'Data Sets',
-//     path: '/dashboard/datasets',
-//     icon: <Database className="w-5 h-5" />
-//   }
-// ];
-
-// const DashboardLayout: React.FC = () => {
-//   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-//   const navigate = useNavigate();
-//   const location = useLocation();
-
-//   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
-
-//   return (
-//     <div className="flex h-screen bg-gray-100">
-//       {/* Sidebar */}
-//       <div 
-//         className={`${
-//           isSidebarOpen ? 'w-64' : 'w-16'
-//         } bg-white shadow-lg transition-all duration-300 ease-in-out`}
-//       >
-//         <div className="flex items-center justify-between p-4">
-//           {isSidebarOpen && <span className="text-xl font-bold">Phyra.ai</span>}
-//           <button onClick={toggleSidebar} className="p-2 hover:bg-gray-100 rounded">
-//             {isSidebarOpen ? <X className="w-5 h-5" /> : <MenuIcon className="w-5 h-5" />}
-//           </button>
-//         </div>
-
-//         <nav className="mt-4">
-//           {SIDEBAR_ITEMS.map((item) => (
-//             <div
-//               key={item.path}
-//               onClick={() => navigate(item.path)}
-//               className={`
-//                 flex items-center px-4 py-3 cursor-pointer
-//                 ${location.pathname === item.path ? 'bg-blue-50 text-blue-600' : 'hover:bg-gray-50'}
-//               `}
-//             >
-//               {item.icon}
-//               {isSidebarOpen && <span className="ml-3">{item.title}</span>}
-//             </div>
-//           ))}
-//         </nav>
-//       </div>
-
-//       {/* Main Content */}
-//       <div className="flex-1 overflow-auto">
-//         <div className="p-8">
-//           <Outlet />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default DashboardLayout;
-
 // src/components/Dashboard/DashboardLayout.tsx
 import React, { useState } from 'react';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
@@ -152,11 +55,11 @@ const SIDEBAR_ITEMS: SidebarItem[] = [
     path: '/dashboard/projects',
     icon: <Folder size={20} />
   },
-  {
-    title: 'Data Sets',
-    path: '/dashboard/datasets',
-    icon: <Database size={20} />
-  },
+  // {
+  //   title: 'Data Sets',
+  //   path: '/dashboard/datasets',
+  //   icon: <Database size={20} />
+  // },
   {
     title: 'Workflows',
     path: '/dashboard/workflows',
@@ -167,16 +70,16 @@ const SIDEBAR_ITEMS: SidebarItem[] = [
     path: '/dashboard/deployments',
     icon: <Cloud size={20} />
   },
-  {
-    title: 'Monitoring',
-    path: '/dashboard/monitoring',
-    icon: <Activity size={20} />
-  },
-  {
-    title: 'Integration Hub',
-    path: '/dashboard/integrations',
-    icon: <Terminal size={20} />
-  },
+  // {
+  //   title: 'Monitoring',
+  //   path: '/dashboard/monitoring',
+  //   icon: <Activity size={20} />
+  // },
+  // {
+  //   title: 'Integration Hub',
+  //   path: '/dashboard/integrations',
+  //   icon: <Terminal size={20} />
+  // },
   {
     title: 'ML Pipeline',
     path: '/dashboard/ml-pipeline',
