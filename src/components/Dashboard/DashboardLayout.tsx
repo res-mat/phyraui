@@ -211,6 +211,11 @@ const DashboardLayout: React.FC = () => {
 
         {/* Page Content */}
         <div className="p-8">
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4 text-center">
+          <p className="text-blue-700">
+            Thanks for signing up with us! All the data you are seeing currently is dummy and we are working on this.
+          </p>
+        </div>
           <Outlet />
         </div>
       </div>

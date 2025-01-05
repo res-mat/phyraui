@@ -35,9 +35,9 @@ const Hero: React.FC = () => (
       <div className="flex-grow container mx-auto px-4 py-16 flex flex-col lg:flex-row items-center justify-between">
         <div className="lg:w-1/2 lg:pr-12">
           <h1 className="text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#2C3CD1' }}>
-            Orchestrate Your
+            Better Understand Your
             <br />
-            AI Infrastructure
+            AI Systems
           </h1>
           <p className="text-lg lg:text-xl mb-8 leading-relaxed" style={{ color: '#2C3CD1' }}>
             <a 
@@ -100,7 +100,7 @@ const Hero: React.FC = () => (
       {/* Feature Cards */}
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold mb-12 text-center" style={{ color: '#2C3CD1' }}>
-          Built for Modern AI Development
+        Sparse Autoencoders - Applications in AI Understanding
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
@@ -131,15 +131,15 @@ const features = [
     title: 'AI Orchestration',
     description: 'Seamlessly manage and coordinate multiple AI systems'
   },
-  {
-    icon: Workflow,
-    title: 'Workflow Automation',
-    description: 'Automate complex AI workflows and pipelines'
-  },
+  // {
+  //   icon: Workflow,
+  //   title: 'Workflow Automation',
+  //   description: 'Automate complex AI workflows and pipelines'
+  // },
   {
     icon: Layers,
-    title: 'Model Management',
-    description: 'Version and manage your ML models effectively'
+    title: 'Interpretability',
+    description: 'Our research explores neural network interpretability through the powerful lens of sparse representations. By leveraging sparse autoencoders, we decompose complex neural mechanisms into their fundamental computational building blocks.'
   },
   {
     icon: Cpu,
@@ -151,18 +151,18 @@ const features = [
 const solutions = [
   {
     icon: Brain,
-    title: 'Unified AI Platform',
-    description: 'A single platform to manage all your AI/ML workloads, from development to deployment.'
+    title: '1.',
+    description: 'This understanding proves invaluable for developing more reliable and controllable AI systems. Our research helps identify potential failure modes and behavioral patterns before they manifest in deployed systems.'
   },
   {
     icon: Workflow,
-    title: 'Intelligent Orchestration',
-    description: 'Advanced orchestration capabilities for complex AI systems and workflows.'
+    title: '2.',
+    description: ' The application of sparse autoencoders extends beyond theoretical insights, providing practical tools for understanding how neural networks process information and develop capabilities. By decomposing neural representations into interpretable features, we gain crucial insights into the mechanisms underlying model behavior.'
   },
   {
     icon: Cpu,
-    title: 'Resource Management',
-    description: 'Efficient allocation and management of computing resources across your AI infrastructure.'
+    title: '3.',
+    description: 'More to come soon..'
   }
 ];
 
