@@ -45,7 +45,7 @@ const Header: React.FC = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/" className="text-gray-800 hover:text-blue-500 px-3 py-2">
+{/*             <Link to="/" className="text-gray-800 hover:text-blue-500 px-3 py-2">
               Home
             </Link>
             <Link to="/blog" className="text-gray-800 hover:text-blue-500 px-3 py-2">
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
             </Link>
             <Link to="/about" className="text-gray-800 hover:text-blue-500 px-3 py-2">
               About
-            </Link>
+            </Link> */}
 
             {/* Auth Buttons */}
             {!isAuthenticated ? (
