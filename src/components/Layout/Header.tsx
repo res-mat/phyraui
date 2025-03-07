@@ -44,7 +44,7 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Navigation Links */}
-{/*           <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
 {/*             <Link to="/" className="text-gray-800 hover:text-blue-500 px-3 py-2">
               Home
             </Link>
@@ -120,7 +120,7 @@ const Header: React.FC = () => {
                 )}
               </div>
             )}
-          </div> */}
+          </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
