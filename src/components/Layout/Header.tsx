@@ -44,8 +44,8 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-4">
-{/*             <Link to="/" className="text-gray-800 hover:text-blue-500 px-3 py-2">
+          {/* <div className="hidden md:flex items-center space-x-4">
+            <Link to="/" className="text-gray-800 hover:text-blue-500 px-3 py-2">
               Home
             </Link>
             <Link to="/blog" className="text-gray-800 hover:text-blue-500 px-3 py-2">
@@ -53,9 +53,7 @@ const Header: React.FC = () => {
             </Link>
             <Link to="/about" className="text-gray-800 hover:text-blue-500 px-3 py-2">
               About
-            </Link> */}
-
-            {/* Auth Buttons */}
+            </Link>
             {!isAuthenticated ? (
               <div className="flex items-center space-x-2">
                 <Link 
@@ -93,7 +91,6 @@ const Header: React.FC = () => {
                   </svg>
                 </button>
 
-                {/* Profile Dropdown */}
                 {isProfileDropdownOpen && (
                   <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-50">
                     <Link
@@ -120,7 +117,7 @@ const Header: React.FC = () => {
                 )}
               </div>
             )}
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
