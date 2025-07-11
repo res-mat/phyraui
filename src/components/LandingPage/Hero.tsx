@@ -1,161 +1,135 @@
 import React from 'react';
-import { Brain, Database, Microscope, Network, Code, GitMerge, Server, Cpu } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Brain, Zap, Network, ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => (
-  <div style={{ backgroundColor: '#ede6da' }}>
-    <div className="min-h-screen flex flex-col">
+  <div style={{ backgroundColor: '#ede6da', position: 'relative' }}>
+    {/* Grain background overlay */}
+    <div className="absolute inset-0 opacity-5 bg-grain animate-grain"></div>
+    <div className="min-h-screen flex flex-col relative z-10">
       <div className="flex-grow container mx-auto px-4 py-16 flex flex-col lg:flex-row items-center justify-between">
-        <div className="lg:w-1/2 lg:pr-12">
-          <h1 className="text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#2C3CD1' }}>
-            AI Research: From Systems to Understanding
-          </h1>
-          <p className="text-lg lg:text-xl mb-8 leading-relaxed" style={{ color: '#2C3CD1' }}>
-            Advancing AI through mechanistic interpretability, synthetic data generation, 
-            and robust ML infrastructure development.
-          </p>
+        <div className="lg:w-3/5 lg:pr-12">
+          <div className="mb-8">
+            <h1 className="text-4xl lg:text-5xl font-light mb-4 tracking-widest" style={{ color: '#2C3CD1', fontFamily: 'Inter, system-ui, sans-serif' }}>
+              PHYRA
+            </h1>
+            <h1 className="text-4xl lg:text-5xl font-light mb-8 tracking-widest" style={{ color: '#2C3CD1', fontFamily: 'Inter, system-ui, sans-serif' }}>
+              RESEARCH
+            </h1>
+            <h2 className="text-3xl lg:text-4xl font-normal mb-4 tracking-wide" style={{ color: '#2C3CD1' }}>
+              The Era of Experience Has Begun
+            </h2>
+          </div>
+          
+          <div className="space-y-6 text-lg lg:text-xl leading-relaxed mb-8" style={{ color: '#2C3CD1' }}>
+            <p>
+              We stand at the threshold of artificial intelligence's next evolutionary leap. For years, AI systems have achieved remarkable capabilities by learning from vast amounts of human-generated data—training on our conversations, our writings, our collective knowledge. But this approach is reaching its fundamental limits.
+            </p>
+            
+            <p>
+              The most groundbreaking discoveries in mathematics, science, and technology have never come from simply reorganizing existing knowledge. They emerge from direct interaction with the world—from experimentation, observation, and the iterative refinement of understanding through experience.
+            </p>
+            
+            <p className="font-semibold text-xl lg:text-2xl">
+              The future belongs to AI systems that learn like we do: continuously, adaptively, and through direct engagement with their environment.
+            </p>
+            
+            <p>
+              Imagine agents that don't just respond to queries, but actively explore, experiment, and evolve. Systems that improve not through periodic retraining, but through every interaction. Intelligence that discovers new strategies beyond human knowledge, not by processing more text, but by engaging with reality itself.
+            </p>
+            
+            <p>
+              This isn't science fiction—it's the natural next step in AI's evolution. The transition from static knowledge to experiential learning. From imitation to discovery. From human-centric to truly autonomous intelligence.
+            </p>
+            
+            <p>
+              At Phyra Research, we believe this Era of Experience will fundamentally reshape how intelligent systems operate, learn, and evolve. We're building the foundational infrastructure that will power this transformation—creating the bridges between artificial minds and the rich, complex environments where true learning happens.
+            </p>
+            
+            <p className="font-semibold">
+              The age of static AI is ending. The age of experiential intelligence has begun.
+            </p>
+            
+            <p className="text-2xl lg:text-3xl font-bold">
+              Welcome to the future of learning.
+            </p>
+          </div>
+          
           <div className="flex space-x-4">
-            <Link
-              to="/research"
-              className="inline-flex items-center px-6 py-3 rounded-lg bg-[#2C3CD1] text-white hover:bg-opacity-90 transition-all"
+            <a
+              href="/research"
+              className="inline-flex items-center px-6 py-3 rounded-lg bg-[#2C3CD1] text-white hover:bg-opacity-90 transition-all group"
             >
-              Research Areas
-            </Link>
-            <Link
-              to="/papers"
+              Explore Our Vision
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <a
+              href="/papers"
               className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-[#2C3CD1] text-[#2C3CD1] hover:bg-[#2C3CD1] hover:text-white transition-all"
             >
-              Publications
-            </Link>
+              Research Papers
+            </a>
           </div>
         </div>
         
-        <div className="lg:w-1/2 mt-12 lg:mt-0">
-          <div className="relative">
-            <div className="absolute top-0 -left-4 w-72 h-72 bg-[#2C3CD1] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob"></div>
-            <div className="absolute top-0 -right-4 w-72 h-72 bg-[#2C3CD1] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-[#2C3CD1] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-4000"></div>
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                {researchAreas.map((area, index) => (
-                  <div 
-                    key={index}
-                    className="bg-white bg-opacity-50 backdrop-blur-lg rounded-lg p-6 hover:transform hover:scale-105 transition-transform"
-                  >
-                    <area.icon className="w-8 h-8 mb-4" style={{ color: '#2C3CD1' }} />
-                    <h3 className="font-semibold mb-2" style={{ color: '#2C3CD1' }}>
-                      {area.title}
-                    </h3>
-                    <p className="text-sm opacity-75" style={{ color: '#2C3CD1' }}>
-                      {area.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
+        <div className="lg:w-2/5 mt-12 lg:mt-0">
+          <div className="relative flex items-center justify-center">
+            {/* Subtle grain effect background */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="w-full h-full bg-grain animate-grain"></div>
             </div>
           </div>
         </div>
       </div>
-
-      <div className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold mb-12 text-center" style={{ color: '#2C3CD1' }}>
-          Research Streams
-        </h2>
-        <div className="grid md:grid-cols-4 gap-8">
-          {researchStreams.map((stream, index) => (
-            <div 
-              key={index}
-              className="bg-white bg-opacity-50 backdrop-blur-lg rounded-lg p-8 hover:transform hover:scale-105 transition-transform"
-            >
-              <div className="w-12 h-12 bg-[#2C3CD1] bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
-                <stream.icon className="w-6 h-6" style={{ color: '#2C3CD1' }} />
-              </div>
-              <h3 className="text-xl font-semibold mb-4" style={{ color: '#2C3CD1' }}>
-                {stream.title}
-              </h3>
-              <p className="text-base opacity-75" style={{ color: '#2C3CD1' }}>
-                {stream.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
+    
+    <style>{styles}</style>
   </div>
 );
 
-const researchAreas = [
+const visionElements = [
   {
     icon: Brain,
-    title: 'Mechanistic Interpretability',
-    description: 'Understanding neural networks through sparse autoencoders and advanced analysis techniques.'
+    title: 'Continuous Learning',
+    description: 'AI systems that evolve through every interaction, discovering new strategies beyond human knowledge.'
   },
   {
-    icon: Database,
-    title: 'Synthetic Data',
-    description: 'Generating high-quality synthetic data for improved model training and evaluation.'
+    icon: Zap,
+    title: 'Experiential Intelligence',
+    description: 'Moving from static training to dynamic learning through direct engagement with reality.'
   },
   {
-    icon: Server,
-    title: 'ML Systems',
-    description: 'Building scalable and efficient infrastructure for training and deploying AI models.'
-  },
-  {
-    icon: GitMerge,
-    title: 'Systems Integration',
-    description: 'Combining interpretability insights with robust infrastructure for better AI systems.'
-  }
-];
-
-const researchStreams = [
-  {
-    icon: Microscope,
-    title: 'Neural Understanding',
-    description: 'Decomposing neural networks into interpretable components using sparse autoencoders, analyzing information processing and capability development within AI systems.'
-  },
-  {
-    icon: Code,
-    title: 'Synthetic Data Generation',
-    description: 'Developing advanced techniques for generating synthetic data that maintains statistical validity while providing enhanced control over training scenarios and edge cases.'
-  },
-  {
-    icon: Server,
-    title: 'ML Infrastructure',
-    description: 'Creating robust, scalable systems for AI development, including distributed training pipelines, efficient model serving, and comprehensive monitoring solutions.'
-  },
-  {
-    icon: Cpu,
-    title: 'Integrated Systems',
-    description: 'Combining interpretability research, synthetic data, and ML infrastructure to build more reliable, understandable, and efficient AI systems.'
+    icon: Network,
+    title: 'Foundational Infrastructure',
+    description: 'Building the bridges between artificial minds and the complex environments where true learning happens.'
   }
 ];
 
 const styles = `
-  @keyframes blob {
-    0% {
-      transform: translate(0px, 0px) scale(1);
-    }
-    33% {
-      transform: translate(30px, -50px) scale(1.1);
-    }
-    66% {
-      transform: translate(-20px, 20px) scale(0.9);
-    }
-    100% {
-      transform: translate(0px, 0px) scale(1);
-    }
+  @keyframes grain {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(-5%, -5%); }
+    20% { transform: translate(-10%, 5%); }
+    30% { transform: translate(5%, -10%); }
+    40% { transform: translate(-5%, 15%); }
+    50% { transform: translate(-10%, 5%); }
+    60% { transform: translate(15%, 0%); }
+    70% { transform: translate(0%, 15%); }
+    80% { transform: translate(-15%, 10%); }
+    90% { transform: translate(10%, 5%); }
+    100% { transform: translate(5%, 0%); }
   }
 
-  .animate-blob {
-    animation: blob 7s infinite;
+  .bg-grain {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(44, 60, 209, 0.1) 1px, transparent 1px),
+      radial-gradient(circle at 50% 50%, rgba(44, 60, 209, 0.08) 1px, transparent 1px),
+      radial-gradient(circle at 75% 75%, rgba(44, 60, 209, 0.06) 1px, transparent 1px);
+    background-size: 20px 20px, 30px 30px, 40px 40px;
+    background-position: 0 0, 10px 10px, 20px 20px;
   }
 
-  .animation-delay-2000 {
-    animation-delay: 2s;
-  }
-
-  .animation-delay-4000 {
-    animation-delay: 4s;
+  .animate-grain {
+    animation: grain 20s linear infinite;
   }
 `;
 
