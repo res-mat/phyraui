@@ -1,198 +1,135 @@
-// import React from 'react';
-
-// const Hero: React.FC = () => (
-//   <div className="min-h-screen flex flex-col items-center justify-center p-4" style={{ backgroundColor: '#ede6da', color: '#2C3CD1' }}>
-//     <h1 className="text-4xl font-bold mb-4">phyra.ai</h1>
-//     <p className="text-lg max-w-2xl text-center">
-//       <a 
-//         href="https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/" 
-//         target="_blank" 
-//         rel="noopener noreferrer"
-//         className="underline hover:text-blue-600"
-//       >
-//         Compound AI systems
-//       </a>{" "}
-//       are revolutionizing the way we approach complex problems. 
-//       By integrating multiple AI technologies, we're unlocking unprecedented potential 
-//       for innovation and efficiency. The future of AI lies in these interconnected 
-//       systems, working in harmony to tackle challenges across industries and drive 
-//       progress in ways we're only beginning to imagine.
-//     </p>
-//   </div>
-// );
-
-// export default Hero;
-// src/components/Landing/Hero.tsx
 import React from 'react';
-import { Brain, Workflow, Layers, Cpu, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Brain, Zap, Network, ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => (
-  <div style={{ backgroundColor: '#ede6da' }}>
-    {/* Hero Section */}
-    <div className="min-h-screen flex flex-col">
-      {/* Main Hero Content */}
+  <div style={{ backgroundColor: '#ede6da', position: 'relative' }}>
+    {/* Grain background overlay */}
+    <div className="absolute inset-0 opacity-5 bg-grain animate-grain"></div>
+    <div className="min-h-screen flex flex-col relative z-10">
       <div className="flex-grow container mx-auto px-4 py-16 flex flex-col lg:flex-row items-center justify-between">
-        <div className="lg:w-1/2 lg:pr-12">
-          <h1 className="text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#2C3CD1' }}>
-            Better Understand Your
-            <br />
-            AI Systems
-          </h1>
-          <p className="text-lg lg:text-xl mb-8 leading-relaxed" style={{ color: '#2C3CD1' }}>
-            <a 
-              href="https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="underline hover:opacity-80 transition-opacity"
-            >
-              Compound AI systems
-            </a>{" "}
-            are revolutionizing the way we approach complex problems. 
-            By integrating multiple AI technologies, we're unlocking unprecedented potential 
-            for innovation and efficiency.
-          </p>
+        <div className="lg:w-3/5 lg:pr-12">
+          <div className="mb-8">
+            <h1 className="text-4xl lg:text-5xl font-light mb-4 tracking-widest" style={{ color: '#2C3CD1', fontFamily: 'Inter, system-ui, sans-serif' }}>
+              PHYRA
+            </h1>
+            <h1 className="text-4xl lg:text-5xl font-light mb-8 tracking-widest" style={{ color: '#2C3CD1', fontFamily: 'Inter, system-ui, sans-serif' }}>
+              RESEARCH
+            </h1>
+            <h2 className="text-3xl lg:text-4xl font-normal mb-4 tracking-wide" style={{ color: '#2C3CD1' }}>
+              The Era of Experience Has Begun
+            </h2>
+          </div>
+          
+          <div className="space-y-6 text-lg lg:text-xl leading-relaxed mb-8" style={{ color: '#2C3CD1' }}>
+            <p>
+              We stand at the threshold of artificial intelligence's next evolutionary leap. For years, AI systems have achieved remarkable capabilities by learning from vast amounts of human-generated data—training on our conversations, our writings, our collective knowledge. But this approach is reaching its fundamental limits.
+            </p>
+            
+            <p>
+              The most groundbreaking discoveries in mathematics, science, and technology have never come from simply reorganizing existing knowledge. They emerge from direct interaction with the world—from experimentation, observation, and the iterative refinement of understanding through experience.
+            </p>
+            
+            <p className="font-semibold text-xl lg:text-2xl">
+              The future belongs to AI systems that learn like we do: continuously, adaptively, and through direct engagement with their environment.
+            </p>
+            
+            <p>
+              Imagine agents that don't just respond to queries, but actively explore, experiment, and evolve. Systems that improve not through periodic retraining, but through every interaction. Intelligence that discovers new strategies beyond human knowledge, not by processing more text, but by engaging with reality itself.
+            </p>
+            
+            <p>
+              This isn't science fiction—it's the natural next step in AI's evolution. The transition from static knowledge to experiential learning. From imitation to discovery. From human-centric to truly autonomous intelligence.
+            </p>
+            
+            <p>
+              At Phyra Research, we believe this Era of Experience will fundamentally reshape how intelligent systems operate, learn, and evolve. We're building the foundational infrastructure that will power this transformation—creating the bridges between artificial minds and the rich, complex environments where true learning happens.
+            </p>
+            
+            <p className="font-semibold">
+              The age of static AI is ending. The age of experiential intelligence has begun.
+            </p>
+            
+            <p className="text-2xl lg:text-3xl font-bold">
+              Welcome to the future of learning.
+            </p>
+          </div>
+          
           <div className="flex space-x-4">
-            <Link
-              to="/signup"
-              className="inline-flex items-center px-6 py-3 rounded-lg bg-[#2C3CD1] text-white hover:bg-opacity-90 transition-all"
+            <a
+              href="/research"
+              className="inline-flex items-center px-6 py-3 rounded-lg bg-[#2C3CD1] text-white hover:bg-opacity-90 transition-all group"
             >
-              Get Started
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Link>
-            <Link
-              to="/documentation"
+              Explore Our Vision
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <a
+              href="/papers"
               className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-[#2C3CD1] text-[#2C3CD1] hover:bg-[#2C3CD1] hover:text-white transition-all"
             >
-              Documentation
-            </Link>
+              Research Papers
+            </a>
           </div>
         </div>
         
-        {/* Visual Element */}
-        <div className="lg:w-1/2 mt-12 lg:mt-0">
-          <div className="relative">
-            <div className="absolute top-0 -left-4 w-72 h-72 bg-[#2C3CD1] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob"></div>
-            <div className="absolute top-0 -right-4 w-72 h-72 bg-[#2C3CD1] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-[#2C3CD1] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-4000"></div>
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                {features.map((feature, index) => (
-                  <div 
-                    key={index}
-                    className="bg-white bg-opacity-50 backdrop-blur-lg rounded-lg p-6 hover:transform hover:scale-105 transition-transform"
-                  >
-                    <feature.icon className="w-8 h-8 mb-4" style={{ color: '#2C3CD1' }} />
-                    <h3 className="font-semibold mb-2" style={{ color: '#2C3CD1' }}>
-                      {feature.title}
-                    </h3>
-                    <p className="text-sm opacity-75" style={{ color: '#2C3CD1' }}>
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
+        <div className="lg:w-2/5 mt-12 lg:mt-0">
+          <div className="relative flex items-center justify-center">
+            {/* Subtle grain effect background */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="w-full h-full bg-grain animate-grain"></div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Feature Cards */}
-      <div className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold mb-12 text-center" style={{ color: '#2C3CD1' }}>
-        Sparse Autoencoders - Applications in AI Understanding
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {solutions.map((solution, index) => (
-            <div 
-              key={index}
-              className="bg-white bg-opacity-50 backdrop-blur-lg rounded-lg p-8 hover:transform hover:scale-105 transition-transform"
-            >
-              <div className="w-12 h-12 bg-[#2C3CD1] bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
-                <solution.icon className="w-6 h-6" style={{ color: '#2C3CD1' }} />
-              </div>
-              <h3 className="text-xl font-semibold mb-4" style={{ color: '#2C3CD1' }}>
-                {solution.title}
-              </h3>
-              <p className="text-base opacity-75" style={{ color: '#2C3CD1' }}>
-                {solution.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
+    
+    <style>{styles}</style>
   </div>
 );
 
-const features = [
+const visionElements = [
   {
     icon: Brain,
-    title: 'AI Orchestration',
-    description: 'Seamlessly manage and coordinate multiple AI systems'
-  },
-  // {
-  //   icon: Workflow,
-  //   title: 'Workflow Automation',
-  //   description: 'Automate complex AI workflows and pipelines'
-  // },
-  {
-    icon: Layers,
-    title: 'Interpretability',
-    description: 'Our research explores neural network interpretability through the powerful lens of sparse representations. By leveraging sparse autoencoders, we decompose complex neural mechanisms into their fundamental computational building blocks.'
+    title: 'Continuous Learning',
+    description: 'AI systems that evolve through every interaction, discovering new strategies beyond human knowledge.'
   },
   {
-    icon: Cpu,
-    title: 'Resource Optimization',
-    description: 'Optimize computing resources for maximum efficiency'
+    icon: Zap,
+    title: 'Experiential Intelligence',
+    description: 'Moving from static training to dynamic learning through direct engagement with reality.'
+  },
+  {
+    icon: Network,
+    title: 'Foundational Infrastructure',
+    description: 'Building the bridges between artificial minds and the complex environments where true learning happens.'
   }
 ];
 
-const solutions = [
-  {
-    icon: Brain,
-    title: '1.',
-    description: 'This understanding proves invaluable for developing more reliable and controllable AI systems. Our research helps identify potential failure modes and behavioral patterns before they manifest in deployed systems.'
-  },
-  {
-    icon: Workflow,
-    title: '2.',
-    description: ' The application of sparse autoencoders extends beyond theoretical insights, providing practical tools for understanding how neural networks process information and develop capabilities. By decomposing neural representations into interpretable features, we gain crucial insights into the mechanisms underlying model behavior.'
-  },
-  {
-    icon: Cpu,
-    title: '3.',
-    description: 'More to come soon..'
-  }
-];
-
-// Add these animations to your global CSS or a separate stylesheet
 const styles = `
-  @keyframes blob {
-    0% {
-      transform: translate(0px, 0px) scale(1);
-    }
-    33% {
-      transform: translate(30px, -50px) scale(1.1);
-    }
-    66% {
-      transform: translate(-20px, 20px) scale(0.9);
-    }
-    100% {
-      transform: translate(0px, 0px) scale(1);
-    }
+  @keyframes grain {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(-5%, -5%); }
+    20% { transform: translate(-10%, 5%); }
+    30% { transform: translate(5%, -10%); }
+    40% { transform: translate(-5%, 15%); }
+    50% { transform: translate(-10%, 5%); }
+    60% { transform: translate(15%, 0%); }
+    70% { transform: translate(0%, 15%); }
+    80% { transform: translate(-15%, 10%); }
+    90% { transform: translate(10%, 5%); }
+    100% { transform: translate(5%, 0%); }
   }
 
-  .animate-blob {
-    animation: blob 7s infinite;
+  .bg-grain {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(44, 60, 209, 0.1) 1px, transparent 1px),
+      radial-gradient(circle at 50% 50%, rgba(44, 60, 209, 0.08) 1px, transparent 1px),
+      radial-gradient(circle at 75% 75%, rgba(44, 60, 209, 0.06) 1px, transparent 1px);
+    background-size: 20px 20px, 30px 30px, 40px 40px;
+    background-position: 0 0, 10px 10px, 20px 20px;
   }
 
-  .animation-delay-2000 {
-    animation-delay: 2s;
-  }
-
-  .animation-delay-4000 {
-    animation-delay: 4s;
+  .animate-grain {
+    animation: grain 20s linear infinite;
   }
 `;
 
